@@ -31,17 +31,9 @@ class BankServer:
 
     def get_local_ip(self):
         """
-        Retrieves the local IP address of the machine running the server.
-
-        :return: The IP address of the machine or None in case of failure.
+        Returns the IP address from the configuration file.
         """
-        try:
-            hostname = socket.gethostname()
-            local_ip = socket.gethostbyname(hostname)
-            return local_ip
-        except Exception as e:
-            self.logger.error(f"Error retrieving local IP: {e}")
-            return None
+        return HOST  # Use the configured IP instead of dynamically detecting it
 
     def handle_client(self, client_socket, address):
         """
