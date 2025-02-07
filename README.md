@@ -148,7 +148,7 @@ CREATE TABLE accounts (
 
 ## Sources 
 ### Reused Code 
-logger.py:          
+logger.py:
 [https://github.com/B1NARYY/Sleeping-barber-problem/blob/master/src/logger.py](https://github.com/B1NARYY/Sleeping-barber-problem/blob/master/src/logger.py)
 
 connection.py:
