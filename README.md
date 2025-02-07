@@ -1,5 +1,7 @@
 # P2P Bank System
 
+### Created by: Matěj Holý, SPŠE Ječná
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
