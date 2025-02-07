@@ -1,5 +1,5 @@
 {
-    "HOST": "26.223.19.119",
+    "HOST": "127.0.0.2",
     "PORT": 65530,
     "TIMEOUT": 5,
     "CLIENT_TIMEOUT": 10,

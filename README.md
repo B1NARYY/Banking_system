@@ -11,7 +11,6 @@
 - [Database Persistence](#database-persistence)
 - [Security](#security)
 - [Troubleshooting](#troubleshooting)
-- [License](#license)
 
 ---
 
@@ -96,6 +95,8 @@ To connect to the server using PuTTY, use from configuration file:
 | `AR` | Remove an account (if balance is 0) | `AR 12345/192.168.1.100` → `AR` |
 | `BA` | Get total bank balance | `BA` → `BA 100000` |
 | `BN` | Get total number of clients | `BN` → `BN 5` |
+
+If you want to list all accounts, run mainConsole.py, and they will be displayed in the console.
 
 ---
 
