@@ -1,0 +1,8 @@
+2025-02-07 17:48:46 [INFO] P2P Bank server started at 26.223.19.119:65530
+2025-02-07 17:48:46 [INFO] Bank server is running and waiting for clients...
+2025-02-07 17:48:49 [INFO] Client connected: ('26.223.19.119', 54636)
+2025-02-07 17:48:51 [INFO] Received command from ('26.223.19.119', 54636): Ab 10000/26.177.170.238
+2025-02-07 17:48:51 [INFO] Trying 26.177.170.238:65525 for forwarding command: AB 10000/26.177.170.238
+2025-02-07 17:49:11 [INFO] Trying 26.177.170.238:65526 for forwarding command: AB 10000/26.177.170.238
+2025-02-07 17:49:31 [INFO] Trying 26.177.170.238:65527 for forwarding command: AB 10000/26.177.170.238
+2025-02-07 17:49:51 [INFO] Trying 26.177.170.238:65528 for forwarding command: AB 10000/26.177.170.238

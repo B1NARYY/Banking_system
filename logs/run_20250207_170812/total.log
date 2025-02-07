@@ -1,0 +1,21 @@
+2025-02-07 17:08:12 [INFO] P2P Bank server started at 26.223.19.119:65530
+2025-02-07 17:08:12 [INFO] Bank server is running and waiting for clients...
+2025-02-07 17:08:15 [INFO] Client connected: ('26.223.19.119', 53407)
+2025-02-07 17:08:16 [INFO] Received command from ('26.223.19.119', 53407): bc
+2025-02-07 17:08:16 [INFO] Response to BC: 26.223.19.119
+2025-02-07 17:08:18 [INFO] Received command from ('26.223.19.119', 53407): ac
+2025-02-07 17:08:18 [INFO] Creating account for IP: 26.223.19.119
+2025-02-07 17:08:18 [INFO] Generated unique account number: 34935
+2025-02-07 17:08:18 [INFO] Account 34935/26.223.19.119 created in database
+2025-02-07 17:08:18 [INFO] Account 34935/26.223.19.119 successfully created and saved to DB
+2025-02-07 17:08:23 [INFO] Client ('26.223.19.119', 53407) disconnected
+2025-02-07 17:09:14 [INFO] Client connected: ('26.223.19.119', 53438)
+2025-02-07 17:09:27 [INFO] Client ('26.223.19.119', 53438) disconnected
+2025-02-07 17:09:33 [INFO] Client connected: ('26.223.19.119', 53448)
+2025-02-07 17:09:53 [ERROR] Client ('26.223.19.119', 53448) timed out – connection closed
+2025-02-07 17:09:53 [INFO] Client ('26.223.19.119', 53448) disconnected
+2025-02-07 17:10:12 [INFO] Client connected: ('26.223.19.119', 53465)
+2025-02-07 17:10:25 [INFO] Received command from ('26.223.19.119', 53465): AD 10000/26.177.170.239 400
+2025-02-07 17:10:25 [INFO] Trying 26.177.170.239:65525 for forwarding command: AD 10000/26.177.170.239 400
+2025-02-07 17:10:39 [INFO] Received response from 26.177.170.239:65525 -> 
+2025-02-07 17:10:55 [INFO] Client ('26.223.19.119', 53465) disconnected

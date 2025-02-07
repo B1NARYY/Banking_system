@@ -1,0 +1,51 @@
+2025-02-07 17:21:24 [INFO] P2P Bank server started at 26.223.19.119:65530
+2025-02-07 17:21:24 [INFO] Bank server is running and waiting for clients...
+2025-02-07 17:21:30 [INFO] Client connected: ('26.223.19.119', 53790)
+2025-02-07 17:21:32 [INFO] Received command from ('26.223.19.119', 53790): AD 10000/26.177.170.239 400
+2025-02-07 17:21:32 [INFO] Trying 26.177.170.239:65525 for forwarding command: AD 10000/26.177.170.239 400
+2025-02-07 17:21:32 [INFO] Received response from 26.177.170.239:65525 -> AD
+2025-02-07 17:21:59 [ERROR] Client ('26.223.19.119', 53790) timed out – connection closed
+2025-02-07 17:21:59 [INFO] Client ('26.223.19.119', 53790) disconnected
+2025-02-07 17:27:51 [INFO] Client connected: ('26.177.170.239', 53250)
+2025-02-07 17:27:51 [INFO] Client ('26.177.170.239', 53250) disconnected
+2025-02-07 17:27:51 [INFO] Client connected: ('26.177.170.239', 53251)
+2025-02-07 17:27:51 [INFO] Received command from ('26.177.170.239', 53251): AD 34935/26.223.19.119 400
+2025-02-07 17:27:51 [INFO] Client ('26.177.170.239', 53251) disconnected
+2025-02-07 17:28:51 [INFO] Client connected: ('26.177.170.239', 53346)
+2025-02-07 17:28:51 [INFO] Client ('26.177.170.239', 53346) disconnected
+2025-02-07 17:28:51 [INFO] Client connected: ('26.177.170.239', 53347)
+2025-02-07 17:28:51 [INFO] Received command from ('26.177.170.239', 53347): AD 55904/26.223.19.119 1000
+2025-02-07 17:28:51 [INFO] Client ('26.177.170.239', 53347) disconnected
+2025-02-07 17:31:09 [INFO] Client connected: ('26.177.170.239', 53607)
+2025-02-07 17:31:09 [INFO] Client ('26.177.170.239', 53607) disconnected
+2025-02-07 17:31:09 [INFO] Client connected: ('26.177.170.239', 53608)
+2025-02-07 17:31:09 [INFO] Received command from ('26.177.170.239', 53608): AW 55904/26.223.19.119 100
+2025-02-07 17:31:09 [INFO] Client ('26.177.170.239', 53608) disconnected
+2025-02-07 17:31:30 [INFO] Client connected: ('26.177.170.239', 53650)
+2025-02-07 17:31:30 [INFO] Client ('26.177.170.239', 53650) disconnected
+2025-02-07 17:31:30 [INFO] Client connected: ('26.177.170.239', 53651)
+2025-02-07 17:31:30 [INFO] Received command from ('26.177.170.239', 53651): AB 55904/26.223.19.119
+2025-02-07 17:31:30 [INFO] Client ('26.177.170.239', 53651) disconnected
+2025-02-07 17:33:09 [INFO] Client connected: ('26.223.19.119', 54127)
+2025-02-07 17:33:28 [INFO] Client ('26.223.19.119', 54127) disconnected
+2025-02-07 17:34:08 [INFO] Client connected: ('26.223.19.119', 54161)
+2025-02-07 17:34:15 [INFO] Received command from ('26.223.19.119', 54161): AB 55904/26.223.19.119
+2025-02-07 17:34:17 [INFO] Client connected: ('26.177.170.239', 53922)
+2025-02-07 17:34:17 [INFO] Client ('26.177.170.239', 53922) disconnected
+2025-02-07 17:34:17 [INFO] Client connected: ('26.177.170.239', 53923)
+2025-02-07 17:34:17 [INFO] Received command from ('26.177.170.239', 53923): AB 55904/26.223.19.119
+2025-02-07 17:34:17 [INFO] Client ('26.177.170.239', 53923) disconnected
+2025-02-07 17:34:18 [INFO] Received command from ('26.223.19.119', 54161): AB 55904/26.223.19.119AB 55904/26.223.19.119
+2025-02-07 17:34:21 [INFO] Received command from ('26.223.19.119', 54161): AB 55904/26.223.19.119
+2025-02-07 17:34:32 [INFO] Client ('26.223.19.119', 54161) disconnected
+2025-02-07 17:35:24 [INFO] Client connected: ('26.223.19.119', 54194)
+2025-02-07 17:35:25 [INFO] Received command from ('26.223.19.119', 54194): Ad 10000/26.177.170.239 400
+2025-02-07 17:35:25 [INFO] Trying 26.177.170.239:65525 for forwarding command: AD 10000/26.177.170.239 400
+2025-02-07 17:35:25 [INFO] Received response from 26.177.170.239:65525 -> AD
+2025-02-07 17:35:31 [INFO] Received command from ('26.223.19.119', 54194): AW 10000/26.177.170.239 100
+2025-02-07 17:35:31 [INFO] Trying 26.177.170.239:65525 for forwarding command: AW 10000/26.177.170.239 100
+2025-02-07 17:35:31 [INFO] Received response from 26.177.170.239:65525 -> AW
+2025-02-07 17:35:36 [INFO] Received command from ('26.223.19.119', 54194): Ab 10000/26.177.170.239
+2025-02-07 17:35:36 [INFO] Trying 26.177.170.239:65525 for forwarding command: AB 10000/26.177.170.239
+2025-02-07 17:35:36 [INFO] Received response from 26.177.170.239:65525 -> AB 2723
+2025-02-07 17:35:44 [INFO] Client ('26.223.19.119', 54194) disconnected

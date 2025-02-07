@@ -1,0 +1,25 @@
+2025-02-07 16:30:09 [INFO] P2P Bank server started at 26.223.19.119:65530
+2025-02-07 16:30:09 [INFO] Bank server is running and waiting for clients...
+2025-02-07 16:30:12 [INFO] Client connected: ('192.168.0.198', 52294)
+2025-02-07 16:30:15 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:15 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:15 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:15 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:16 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:16 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:16 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:16 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:16 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:16 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:16 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:16 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:17 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:17 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:18 [INFO] Received command from ('192.168.0.198', 52294): CB
+2025-02-07 16:30:18 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:18 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:18 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:18 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:19 [INFO] Received command from ('192.168.0.198', 52294): BC
+2025-02-07 16:30:19 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:30:22 [INFO] Client ('192.168.0.198', 52294) disconnected

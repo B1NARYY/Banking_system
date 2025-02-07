@@ -1,0 +1,116 @@
+2025-02-07 18:05:45 [INFO] P2P Bank server started at 26.223.19.119:65530
+2025-02-07 18:05:45 [INFO] Bank server is running and waiting for clients...
+2025-02-07 18:05:48 [INFO] Client connected: ('26.223.19.119', 55149)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): import socket
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): import threading
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): import random
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): import time
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): from config import HOST, PORT, TIMEOUT, CLIENT_TIMEOUT
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): from utils.logger import Logger
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): from commands import CommandHandler
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): from database.account_repository import AccountRepository
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): class BankServer:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): def __init__(self):
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): """Initializes the bank server."""
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.server_socket.bind((HOST, PORT))
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.server_socket.listen(5)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.command_handler = CommandHandler(self)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.account_repository = AccountRepository()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger = Logger()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.ip_address = self.get_local_ip()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"P2P Bank server started at {self.ip_address}:{PORT}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): def get_local_ip(self):
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): """Returns the local IP address of the machine running the server."""
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): try:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): hostname = socket.gethostname()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): local_ip = socket.gethostbyname(hostname)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): return local_ip
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): except Exception as e:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error(f"Error retrieving local IP: {e}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): return None
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): def handle_client(self, client_socket, address):
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): """Handles communication with a connected client."""
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"Client connected: {address}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): client_socket.settimeout(CLIENT_TIMEOUT)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): buffer = ""
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): try:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): while True:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): try:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): data = client_socket.recv(1024).decode("utf-8")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): if not data:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): break
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): buffer += data
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): while "\n" in buffer:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): line, buffer = buffer.split("\n", 1)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): command = line.strip()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): if command:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"Received command from {address}: {command}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): start_time = time.time()  # Measure execution time
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): response = self.command_handler.process_command(command, address)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): if time.time() - start_time > TIMEOUT:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error(f"Command timeout: {command}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): response = "ER Processing timeout"
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): client_socket.sendall((response + "\n").encode("utf-8"))
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): client_socket.settimeout(CLIENT_TIMEOUT)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): except socket.timeout:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error(f"Client {address} timed out – connection closed")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): client_socket.sendall("ER Connection timed out\n".encode("utf-8"))
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): break
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): except Exception as e:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error(f"Error communicating with {address}: {str(e)}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): client_socket.sendall("ER Internal server error\n".encode("utf-8"))
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): finally:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): client_socket.close()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"Client {address} disconnected")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): def create_account(self, ip_address):
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): """Creates a new bank account, saves it to the database, and returns the account number."""
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"Creating account for IP: {ip_address}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): for _ in range(5):  # Attempt up to 5 times to find a unique account number
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): account_number = random.randint(10000, 99999)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): if not self.account_repository.account_exists(account_number):
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"Generated unique account number: {account_number}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): success = self.account_repository.create_account(account_number, ip_address)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): if success:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"Account {account_number}/{ip_address} successfully created and saved to DB")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): return f"AC {account_number}/{ip_address}"
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): else:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error("Database error while creating account")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): return "ER Database error"
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error("Failed to generate a unique account number")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): return "ER Unable to create account"
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): def forward_to_peer(self, peer_ip, command):
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): """Tries multiple ports to connect to a peer and forward the command."""
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): possible_ports = range(65525, 65536)  # Range of valid ports
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): start_time = time.time()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): for peer_port in possible_ports:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): if time.time() - start_time > TIMEOUT:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error("Exceeded maximum allowed time for peer communication")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): return "ER Request timeout"
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): try:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"Trying {peer_ip}:{peer_port} for forwarding command: {command}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): with socket.create_connection((peer_ip, peer_port), timeout=TIMEOUT) as s:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): s.sendall((command + "\n").encode("utf-8"))
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): response = s.recv(1024).decode("utf-8").strip()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info(f"Received response from {peer_ip}:{peer_port}: {response}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): return response
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): except Exception as e:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error(f"Failed to connect to {peer_ip}:{peer_port}: {e}")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.error(f"Unable to connect to peer {peer_ip} on any port")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): return "ER Peer connection failed"
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): def start(self):
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): """Starts the bank server and listens for connections."""
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): self.logger.info("Bank server is running and waiting for clients...")
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): while True:
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): client_socket, address = self.server_socket.accept()
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): client_socket.settimeout(CLIENT_TIMEOUT)
+2025-02-07 18:05:49 [INFO] Received command from ('26.223.19.119', 55149): threading.Thread(target=self.handle_client, args=(client_socket, address), daemon=True).start()
+2025-02-07 18:06:05 [INFO] Received command from ('26.223.19.119', 55149): Ab 10000/26.177.170.230
+2025-02-07 18:06:05 [INFO] Trying 26.177.170.230:65525 for forwarding command: AB 10000/26.177.170.230
+2025-02-07 18:06:10 [ERROR] Failed to connect to 26.177.170.230:65525: timed out
+2025-02-07 18:06:10 [ERROR] Exceeded maximum allowed time for peer communication
+2025-02-07 18:06:10 [ERROR] Command timeout: Ab 10000/26.177.170.230
+2025-02-07 18:06:23 [INFO] Received command from ('26.223.19.119', 55149): ab
+2025-02-07 18:06:43 [ERROR] Client ('26.223.19.119', 55149) timed out – connection closed
+2025-02-07 18:06:43 [INFO] Client ('26.223.19.119', 55149) disconnected

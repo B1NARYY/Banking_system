@@ -1,0 +1,7 @@
+2025-02-07 18:02:48 [INFO] P2P Bank server started at 26.223.19.119:65530
+2025-02-07 18:02:48 [INFO] Bank server is running and waiting for clients...
+2025-02-07 18:02:52 [INFO] Client connected: ('26.223.19.119', 55060)
+2025-02-07 18:02:55 [INFO] Received command from ('26.223.19.119', 55060): Ab 10000/26.177.170.230
+2025-02-07 18:02:55 [INFO] Trying 26.177.170.230:65525 for forwarding command: AB 10000/26.177.170.230
+2025-02-07 18:03:15 [ERROR] Error processing command Ab 10000/26.177.170.230: 'Logger' object has no attribute 'warning'
+2025-02-07 18:03:27 [INFO] Client ('26.223.19.119', 55060) disconnected

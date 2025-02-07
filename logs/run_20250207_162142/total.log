@@ -1,0 +1,45 @@
+2025-02-07 16:21:42 [INFO] P2P Bank server started at 192.168.0.198:65530
+2025-02-07 16:21:42 [INFO] Bank server is running and waiting for clients...
+2025-02-07 16:21:54 [INFO] Client connected: ('192.168.0.198', 51902)
+2025-02-07 16:21:56 [INFO] Received command from ('192.168.0.198', 51902): bc
+2025-02-07 16:21:56 [INFO] Response to BC: 192.168.0.198
+2025-02-07 16:21:58 [INFO] Received command from ('192.168.0.198', 51902): AC
+2025-02-07 16:21:58 [INFO] Creating account for IP: 192.168.0.198
+2025-02-07 16:21:58 [INFO] Generated unique account number: 32766
+2025-02-07 16:21:58 [INFO] Account 32766/192.168.0.198 created in database
+2025-02-07 16:21:58 [INFO] Account 32766/192.168.0.198 successfully created and saved to DB
+2025-02-07 16:22:07 [INFO] Client ('192.168.0.198', 51902) disconnected
+2025-02-07 16:27:48 [INFO] Client connected: ('192.168.0.198', 52138)
+2025-02-07 16:27:51 [INFO] Received command from ('192.168.0.198', 52138): BC
+2025-02-07 16:27:51 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:01 [ERROR] Client ('192.168.0.198', 52138) timed out – connection closed
+2025-02-07 16:28:01 [INFO] Client ('192.168.0.198', 52138) disconnected
+2025-02-07 16:28:14 [INFO] Client connected: ('192.168.0.198', 52155)
+2025-02-07 16:28:17 [INFO] Received command from ('192.168.0.198', 52155): BC
+2025-02-07 16:28:25 [INFO] Received command from ('192.168.0.198', 52155): asd
+2025-02-07 16:28:25 [INFO] Received command from ('192.168.0.198', 52155): d
+2025-02-07 16:28:25 [INFO] Received command from ('192.168.0.198', 52155): s
+2025-02-07 16:28:27 [INFO] Received command from ('192.168.0.198', 52155): BC
+2025-02-07 16:28:27 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:30 [INFO] Received command from ('192.168.0.198', 52155): BC
+2025-02-07 16:28:30 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:30 [INFO] Received command from ('192.168.0.198', 52155): BC
+2025-02-07 16:28:30 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:31 [INFO] Received command from ('192.168.0.198', 52155): BC
+2025-02-07 16:28:31 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:33 [INFO] Received command from ('192.168.0.198', 52155): AC
+2025-02-07 16:28:33 [INFO] Creating account for IP: 192.168.0.198
+2025-02-07 16:28:33 [INFO] Generated unique account number: 41782
+2025-02-07 16:28:33 [INFO] Account 41782/192.168.0.198 created in database
+2025-02-07 16:28:33 [INFO] Account 41782/192.168.0.198 successfully created and saved to DB
+2025-02-07 16:28:39 [INFO] Client ('192.168.0.198', 52155) disconnected
+2025-02-07 16:28:51 [INFO] Client connected: ('192.168.0.198', 52173)
+2025-02-07 16:28:53 [INFO] Received command from ('192.168.0.198', 52173): BC
+2025-02-07 16:28:53 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:53 [INFO] Received command from ('192.168.0.198', 52173): BC
+2025-02-07 16:28:53 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:54 [INFO] Received command from ('192.168.0.198', 52173): BC
+2025-02-07 16:28:54 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:54 [INFO] Received command from ('192.168.0.198', 52173): BC
+2025-02-07 16:28:54 [INFO] Response to BC: 26.223.19.119
+2025-02-07 16:28:57 [INFO] Client ('192.168.0.198', 52173) disconnected

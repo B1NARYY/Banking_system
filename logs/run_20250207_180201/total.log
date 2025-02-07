@@ -1,0 +1,7 @@
+2025-02-07 18:02:01 [INFO] P2P Bank server started at 26.223.19.119:65530
+2025-02-07 18:02:01 [INFO] Bank server is running and waiting for clients...
+2025-02-07 18:02:07 [INFO] Client connected: ('26.223.19.119', 55029)
+2025-02-07 18:02:10 [INFO] Received command from ('26.223.19.119', 55029): bc
+2025-02-07 18:02:10 [INFO] Response to BC: 26.223.19.119
+2025-02-07 18:02:15 [ERROR] Client ('26.223.19.119', 55029) timed out – connection closed
+2025-02-07 18:02:15 [INFO] Client ('26.223.19.119', 55029) disconnected
