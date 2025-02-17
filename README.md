@@ -165,6 +165,7 @@ encrypt_password.py:
 - **MySQL in Python**: [https://www.w3schools.com/python/python_mysql_getstarted.asp](https://www.w3schools.com/python/python_mysql_getstarted.asp)
 - **Cryptography in Python (Fernet Encryption)**: [https://cryptography.io/en/latest/fernet/](https://cryptography.io/en/latest/fernet/)
 - **Logging Guide**: [https://www.dataset.com/blog/the-10-commandments-of-logging/](https://www.dataset.com/blog/the-10-commandments-of-logging/)
+- **Python Socket**: [https://docs.python.org/3/library/socket.html](https://docs.python.org/3/library/socket.html)
 - **ChatGPT (Sharing conversations with user uploaded images is not yet supported)**: [https://chatgpt.com/c/67a1039e-4054-8001-886f-f17594b370d9](https://chatgpt.com/c/67a1039e-4054-8001-886f-f17594b370d9)
 - **Python Documentation (ChatGPT)**: [https://docs.python.org/3/](https://docs.python.org/3/)
 
